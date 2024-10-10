@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
@@ -7,7 +7,7 @@
 #define ITERATIONS 10
 
 int main() {
-    int N = 500;
+    int N = 1024;
 
     double** m1 = allocateMatrix(N);
     double** m2 = allocateMatrix(N);
@@ -54,6 +54,8 @@ int main() {
     printf("Maximum time: %f seconds\n", max_time);
     printf("Average time: %f seconds\n", average_time);
     printf("Standard deviation: %f seconds\n", standard_deviation);
+
+    printMemoryAndCPUUsage();
 
     freeMatrix(m1, N);
     freeMatrix(m2, N);
